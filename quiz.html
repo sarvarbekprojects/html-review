@@ -3,89 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Course Assignment</title>
-    <link rel="stylesheet" href="css/quiz.css">
+    <title>Course Project — Modules & Knowledge Test</title>
+    <link rel="stylesheet" href="/html-review/css/quiz.css">
 </head>
 <body>
 
     <header>
-        <h1>Practical Web Development Assignment</h1>
-        <p>Full-Stack Application using HTML, CSS, JavaScript, and PHP</p>
+        <h1>Practical Web Development Project</h1>
+        <p>Course Topics in HTML, CSS, PHP, and MySQL</p>
     </header>
 
     <main>
-        <!-- Table Section -->
+        <!-- BLOCK 1: COURSE MODULES TABLE -->
         <section class="card">
-            <h2>Course Modules Overview (Tables)</h2>
+            <h2>Course Learning Modules (Syllabus)</h2>
             <table>
-                <caption>Syllabus Weightage Table</caption>
+                <caption>Module Weightage Overview</caption>
+                <thead>
                     <tr>
                         <th>Module</th>
-                        
-                        <th>Topic</th>
+                        <th>Topics & Description</th>
                         <th>Weightage (%)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Module I</td>
-                        <td>HTML5 & UX Overview</td>
+                        <td>Introduction to HTML Programming & Overview of UX</td>
                         <td>15%</td>
                     </tr>
                     <tr>
                         <td>Module II</td>
-                        <td>Tables, IFrames & Forms</td>
+                        <td>Table, IFrames and Forms</td>
                         <td>15%</td>
                     </tr>
                     <tr>
                         <td>Module III</td>
-                        <td>CSS & CSS Frameworks</td>
+                        <td>Introduction to Cascading Style Sheets (CSS) & CSS Framework</td>
                         <td>20%</td>
                     </tr>
                     <tr>
                         <td>Module IV</td>
-                        <td>JavaScript & AJAX</td>
+                        <td>JavaScript & AJAX Overview</td>
                         <td>20%</td>
                     </tr>
                     <tr>
+                        <td>Module V</td>
+                        <td>XML, Bootstrap & UX/UI design</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
                         <td>Module VI</td>
-                        <td>PHP Programming & MySQL Database</td>
+                        <td>PHP Programming & Working With Database (MySQL)</td>
                         <td>20%</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- IFrame Section -->
+        <!-- BLOCK 2: QUIZ FORM (PROCESSED BY PHP) -->
         <section class="card">
-            <h2>External Resource Embedding (IFrame)</h2>
-            <iframe src="https://www.wikipedia.org" title="Wikipedia Preview" width="100%" height="200"></iframe>
-        </section>
+            <h2>Test Your Knowledge (Course Quiz)</h2>
+            <form action="quiz.php" method="POST">
 
-        <!-- Form Section -->
-        <section class="card">
-            <h2>Contact & Feedback Form (Forms)</h2>
-            <form id="contactForm" action="process.php" method="POST">
-                <div class="form-group">
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" required>
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <h3>1. Which HTML5 tag is used to embed another webpage directly into your page?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a" required> <code>&lt;embed-page&gt;</code></label>
+                        <label><input type="radio" name="q1" value="b"> <code>&lt;iframe&gt;</code></label>
+                        <label><input type="radio" name="q1" value="c"> <code>&lt;window&gt;</code></label>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <h3>2. Which CSS property adds space inside an element's border?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a" required> <code>margin</code></label>
+                        <label><input type="radio" name="q2" value="b"> <code>padding</code></label>
+                        <label><input type="radio" name="q2" value="c"> <code>border-spacing</code></label>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <h3>3. Which PHP array is used to retrieve data submitted with method="POST"?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a" required> <code>$_GET</code></label>
+                        <label><input type="radio" name="q3" value="b"> <code>$_POST</code></label>
+                        <label><input type="radio" name="q3" value="c"> <code>$DATA_POST</code></label>
+                    </div>
                 </div>
 
-                <button type="submit" id="submitBtn">Submit Data</button>
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <h3>4. Which SQL statement is used to insert new records into a MySQL table?</h3>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a" required> <code>INSERT INTO</code></label>
+                        <label><input type="radio" name="q4" value="b"> <code>ADD RECORD</code></label>
+                        <label><input type="radio" name="q4" value="c"> <code>UPDATE DATA</code></label>
+                    </div>
+                </div>
+
+                <button type="submit">Submit Answers</button>
             </form>
         </section>
     </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
